@@ -1,0 +1,26 @@
+/*
+ *
+ *
+ *
+ *
+ * @objects.link(css)
+ *
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-link-namespace:             $inuit-namespace-objects !default;
+
+
+$inuit-link-color:                  #4a8ec2 !default;
+
+.#{$inuit-link-namespace}link,
+%#{$inuit-link-namespace}link {
+
+	color : $inuit-link-color;
+	cursor : pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+}

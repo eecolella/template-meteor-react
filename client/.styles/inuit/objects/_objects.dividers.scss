@@ -1,0 +1,44 @@
+/*
+ *
+ *
+ *
+ *
+ * @dividers(css)
+ *
+ */
+
+$inuit-dividers : $inuit-namespace-objects !default;
+
+$inuit-dividers-color : $inuit-heading-color !default;
+$inuit-dividers-height : 1px !default;
+
+.#{$inuit-dividers}divider,
+%#{$inuit-dividers}divider {
+
+  &--after {
+    position : relative;
+
+    &:after,
+    &:before {
+      content          : '';
+      position         : absolute;
+      bottom           : -$inuit-base-spacing-unit--small + 2;
+      left             : 50%;
+      width            : 80px;
+      margin-left      : -40px;
+      height           : $inuit-dividers-height;
+      background-color : $inuit-dividers-color;
+    }
+
+    &:before{
+      bottom           : -$inuit-base-spacing-unit--small - 4;
+      width            : 40px;
+      margin-left      : -20px;
+    }
+  }
+
+  &--div {
+    height     : $inuit-dividers-height;
+    background : $inuit-dividers-color;
+  }
+}

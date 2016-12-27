@@ -1,0 +1,122 @@
+/*
+ *
+ *
+ *
+ *
+ * @objects.arrow(css)
+ *
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$arrow-namespace : $inuit-namespace-objects !default;
+
+$arrow-enable--white : false !default;
+$arrow-enable--up : false !default;
+
+$arrow-color : $inuit-base-text-color !default;
+
+$arrow-utility-height : 7px !default;
+$arrow-utility-single-width : 8px !default;
+$arrow-utility-width : 12px !default;
+
+.#{$arrow-namespace}arrow {
+	@extend %arrow;
+	@extend %arrow--down;
+
+	&--reverse &,
+	&--hover:hover & {
+		@extend %arrow--up;
+	}
+
+	@if ($arrow-enable--white == true) {
+		&--white {
+			@extend %arrow--white;
+		}
+	}
+
+	@if ($arrow-enable--up == true) {
+		%arrow--up,
+		&--up {
+			@extend %arrow--up;
+		}
+
+		&--up-reverse &,
+		&--up-hover:hover & {
+			@extend %arrow--down;
+		}
+	}
+
+}
+
+/*
+ *
+ *
+ *
+ *
+ * @arrow(css)
+ *
+ */
+%arrow {
+	display : inline-block;
+	width   : $arrow-utility-width;
+	height  : $arrow-utility-height;
+
+	&:before,
+	&:after {
+		content          : "";
+		position         : absolute;
+		background-color : $arrow-color;
+		width            : 2px;
+		height           : 7px;
+		margin-left      : 5px;
+		cursor           : pointer;
+		will-change      : transform;
+		transition       : transform 0.25s ease-in-out;
+	}
+
+	&:before { transform : translate(2px, 0px) rotate(45deg); }
+	&:after { transform : translate(-2px, 0px) rotate(-45deg); }
+}
+
+/*
+ *
+ *
+ *
+ *
+ * @arrow--down(css)
+ *
+ */
+%arrow--down {
+	&:before { transform : translate(2px, 0px) rotate(45deg); }
+	&:after { transform : translate(-2px, 0px) rotate(-45deg); }
+}
+
+/*
+ *
+ *
+ *
+ *
+ * @arrow--up(css)
+ *
+ */
+%arrow--up {
+	&:before { transform : translate(-2px, 0px) rotate(45deg); }
+	&:after { transform : translate(2px, 0px) rotate(-45deg); }
+}
+
+/*
+ *
+ *
+ *
+ *
+ * @arrow--white(css)
+ *
+ */
+%arrow--white {
+
+	&:before,
+	&:after {
+		background-color : #fff;
+	}
+
+}

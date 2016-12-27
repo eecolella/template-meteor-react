@@ -1,0 +1,21 @@
+/*
+ *
+ *
+ *
+ *
+ * @objects.wrapper(css)
+ *
+ */
+
+$inuit-wrapper-namespace:       $inuit-namespace-objects !default;
+
+$inuit-wrapper-max-width : 1100px !default;
+$inuit-wrapper-padding : $inuit-base-spacing-unit !default;
+
+.#{$inuit-wrapper-namespace}wrapper,
+%#{$inuit-wrapper-namespace}wrapper {
+	max-width     : $inuit-wrapper-max-width;
+	margin        : 0 auto;
+	padding-right : $inuit-wrapper-padding;
+	padding-left  : $inuit-wrapper-padding;
+}

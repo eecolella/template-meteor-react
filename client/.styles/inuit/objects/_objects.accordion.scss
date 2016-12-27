@@ -1,0 +1,105 @@
+/*
+ *
+ *
+ *
+ *
+ * @components.accordion(css)
+ *
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$accordion-namespace : $inuit-namespace-objects !default;
+
+$accordion-padding-left : 30px !default;
+$accordion-padding-vertical : $inuit-base-spacing-unit--small !default;
+$accordion-background : #4a8ec2 !default;
+$accordion-background-children-overlay : rgba(0, 0, 0, 0.2) !default;
+$accordion-divider-color : inset 0 -1px rgba(255, 255, 255, 0.4) !default;
+
+.#{$accordion-namespace}accordion {
+	background  : $accordion-background;
+	list-style  : none;
+	margin-left : 0;
+	/*
+	 *
+	 *
+	 *
+	 *
+	 * @accordion-input(css)
+	 *
+	 */
+	&__input {
+		position : absolute;
+		opacity  : 0;
+	}
+
+	/*
+	 *
+	 *
+	 *
+	 *
+	 * @accordion-list(css)
+	 *
+	 */
+	&__list {
+		background  : $accordion-background-children-overlay;
+		display     : none;
+		list-style  : none;
+		margin-left : 0;
+
+		.o-accordion__input:checked + .o-accordion__label + & {
+			display : block;
+		}
+	}
+
+	/*
+	 *
+	 *
+	 *
+	 *
+	 * @accordion-label(css)
+	 *
+	 */
+	&__label {
+		position   : relative;
+		display    : block;
+		padding    : $accordion-padding-vertical $accordion-padding-left;
+		color      : #fff;
+		box-shadow : $accordion-divider-color;
+	}
+
+	&__list &__label { padding-left : $accordion-padding-left * 2 }
+	&__list &__list &__label { padding-left : $accordion-padding-left * 3 }
+	&__list &__list &__list &__label { padding-left : $accordion-padding-left * 4 }
+
+	/*
+	 *
+	 *
+	 *
+	 *
+	 * @accordion-icon(css)
+	 *
+	 */
+	&__icon {
+		position : absolute;
+		top      : 50%;
+		margin   : -4px 0 0 -19px;
+	}
+
+	/*
+	 *
+	 *
+	 *
+	 *
+	 * @accordion-arrow(css)
+	 *
+	 */
+	.o-arrow {
+		@extend %arrow--white;
+
+		@at-root .o-accordion__input:checked + .o-accordion__label .o-arrow {
+			@extend %arrow--up;
+		}
+	}
+
+}

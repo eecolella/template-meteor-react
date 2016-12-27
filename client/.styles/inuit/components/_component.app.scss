@@ -1,0 +1,26 @@
+/*
+ *
+ *
+ *
+ *
+ * @_component.app.scss(css)
+ *
+ */
+
+
+
+$inuit-app-namespace:       $inuit-namespace-components !default;
+
+
+
+.#{$inuit-app-namespace}app,
+%#{$inuit-app-namespace}app {
+	
+	padding: $inuit-base-spacing-unit--large;
+	min-height: 100vh;
+	background : #fff;
+	border: $inuit-base-spacing-unit*1.5 solid #e8e8e8; //36px
+	
+	
+	// @extend %o-shadow-2;
+}

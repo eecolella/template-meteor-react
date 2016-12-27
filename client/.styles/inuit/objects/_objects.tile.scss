@@ -1,0 +1,22 @@
+/*
+ *
+ *
+ *
+ *
+ * @components.tile(css)
+ *
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$tile-namespace : $inuit-namespace-objects !default;
+
+$tile-border-color: $inuit-base-color-border !default;
+
+.#{$tile-namespace}tile,
+%#{$tile-namespace}tile {
+
+	@extend %o-box;
+	margin-bottom: $inuit-base-spacing-unit;
+	border: 1px solid $tile-border-color;
+
+}

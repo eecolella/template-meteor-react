@@ -1,0 +1,38 @@
+/*
+ *
+ *
+ *
+ *
+ * @settings.responsive(css)
+ *
+ * original: https://github.com/inuitcss/settings.responsive
+ *
+ * Hold our breakpoint aliases and conditions in a list.
+ *
+ * These can be invoked later on via the `media-query()` mixin found in `_tools.responsive`.
+ *
+ *
+ */
+$breackpoint-portable-value : "1240";
+$breackpoint-tablet-land-value : "960px";
+$breackpoint-tablet-value : "768px";
+$breackpoint-smart-land-value : "600px";
+$breackpoint-smart-value : "480px";
+
+$breackpoint-portable : "(max-width: " + $breackpoint-portable-value + ")";
+$breackpoint-tablet-land : "(max-width: " + $breackpoint-tablet-land-value + ")";
+$breackpoint-tablet : "(max-width: " + $breackpoint-tablet-value + ")";
+$breackpoint-smart-land : "(max-width: " + $breackpoint-smart-land-value + ")";
+$breackpoint-smart : "(max-width: " + $breackpoint-smart-value + ")";
+
+$breakpoints : (
+	"portable" $breackpoint-portable,
+	"tablet-land" $breackpoint-tablet-land,
+	"tablet" $breackpoint-tablet,
+	"smart-land" $breackpoint-smart-land,
+	"smart" $breackpoint-smart
+) !default;
+
+// If we have included this file, set a variable to tell the rest of the
+// framework that we have some responsive settings.
+$inuit-responsive-settings : true;

@@ -1,0 +1,127 @@
+/*
+ *
+ *
+ *
+ *
+ * @trumps.misc(css)
+ *
+ */
+
+$trumps-misc-namespace : $inuit-namespace-utilities !default;
+
+
+
+/* * @font(css) */
+
+.#{$trumps-misc-namespace}nowrap,
+%#{$trumps-misc-namespace}nowrap {
+	white-space : nowrap;
+}
+
+.#{$trumps-misc-namespace}t-uppercase,
+%#{$trumps-misc-namespace}t-uppercase {
+	text-transform : uppercase;
+}
+
+.#{$trumps-misc-namespace}font-weight-300,
+%#{$trumps-misc-namespace}font-weight-300{
+  font-weight: 300;
+}
+
+
+
+/* * @layout(css) */
+
+.#{$trumps-misc-namespace}fr,
+%#{$trumps-misc-namespace}fr {
+	float : right;
+}
+
+.#{$trumps-misc-namespace}fl,
+%#{$trumps-misc-namespace}fl {
+	float : left;
+}
+
+.#{$trumps-misc-namespace}display-inline,
+%#{$trumps-misc-namespace}display-inline {
+	display : inline;
+}
+
+.#{$trumps-misc-namespace}display-block,
+%#{$trumps-misc-namespace}display-block {
+	display : block;
+}
+
+
+
+/* * @alignment(css) */
+
+.#{$trumps-misc-namespace}h-center,
+%#{$trumps-misc-namespace}h-center {
+	text-align : center;
+}
+
+.#{$trumps-misc-namespace}h-right,
+%#{$trumps-misc-namespace}h-right {
+	text-align : right;
+}
+
+.#{$trumps-misc-namespace}h-left,
+%#{$trumps-misc-namespace}h-left {
+	text-align : left;
+}
+
+
+
+/* * @transitions(css) */
+
+.#{$trumps-misc-namespace}transition-0,
+%#{$trumps-misc-namespace}transition-0 {
+	transition : none;
+}
+
+
+
+/* * @postion(css) */
+
+.#{$trumps-misc-namespace}relative,
+%#{$trumps-misc-namespace}relative {
+	position : relative;
+}
+
+.#{$trumps-misc-namespace}relative,
+%#{$trumps-misc-namespace}relative {
+  position : absolute;
+}
+
+.#{$trumps-misc-namespace}t0,
+%#{$trumps-misc-namespace}t0 {
+  top : 0;
+}
+
+.#{$trumps-misc-namespace}r0,
+%#{$trumps-misc-namespace}r0 {
+  right : 0;
+}
+
+.#{$trumps-misc-namespace}b0,
+%#{$trumps-misc-namespace}b0 {
+  bottom : 0;
+}
+
+.#{$trumps-misc-namespace}l0,
+%#{$trumps-misc-namespace}l0 {
+  left : 0;
+}
+
+
+
+/* * @unselectable(css) */
+
+.#{$trumps-misc-namespace}unselectable,
+%#{$trumps-misc-namespace}unselectable {
+	-moz-user-select    : none;
+	-khtml-user-select  : none;
+	-webkit-user-select : none;
+	-o-user-select      : none;
+}

@@ -1,0 +1,25 @@
+/*
+ *
+ *
+ *
+ *
+ * @objects.textarea(css)
+ *
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-textarea-namespace:       $inuit-namespace-objects !default;
+
+
+$inuit-textarea-padding:            2px 4px !default;
+$inuit-textarea-radius:             $inuit-base-radius !default;
+$inuit-textarea-color-border:       $inuit-base-color-border !default;
+
+.#{$inuit-textarea-namespace}textarea,
+%#{$inuit-textarea-namespace}textarea {
+
+	padding: $inuit-textarea-padding;
+	border-radius: $inuit-textarea-radius;
+	border: 1px solid $inuit-textarea-color-border;
+
+}

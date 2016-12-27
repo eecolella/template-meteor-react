@@ -1,0 +1,27 @@
+/*
+ *
+ *
+ *
+ *
+ * @trumps.clearfix(css)
+ *
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-clearfix-namespace:             $inuit-namespace-utilities !default;
+
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.clearfix` class appearing
+ * over and over in your markup.
+ */
+.#{$inuit-clearfix-namespace}clearfix,
+%#{$inuit-clearfix-namespace}clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}

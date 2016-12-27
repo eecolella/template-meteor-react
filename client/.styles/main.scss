@@ -1,0 +1,183 @@
+/*
+ *
+ *
+ *
+ *
+ * **************************************** @main.scss
+ * ***************************************************
+ *
+ *
+ *        # #    # #    # # #####  ####   ####   ####
+ *        # ##   # #    # #   #   #    # #      #
+ *        # # #  # #    # #   #   #       ####   ####
+ *        # #  # # #    # #   #   #           #      #
+ *        # #   ## #    # #   #   #    # #    # #    #
+ *        # #    #  ####  #   #    ####   ####   ####
+ *
+ *
+ * https://github.com/inuitcss
+ *
+ *
+ * Settings:    Global variables, site-wide settings, config switches, etc.
+ * Tools:       Site-wide mixins and functions.
+ * Generic:     Low-specificity, far-reaching rulesets (e.g. resets).
+ * Base:        Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).
+ * Objects:     Objects, abstractions, and design patterns (e.g. .media {}).
+ * Components:  Discrete, complete chunks of UI (e.g. .carousel {}). This is the one layer that inuitcss doesn�t get involved with.
+ * Trumps:      High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
+ *
+ *
+ * Settings:    bower install --save inuit-defaults inuit-responsive-settings
+ * Tools:       bower install --save inuit-functions inuit-mixins inuit-tools-widths inuit-responsive-tools
+ * Generic:     bower install --save inuit-normalize inuit-reset inuit-box-sizing inuit-shared
+ * Base:        bower install --save inuit-page inuit-headings inuit-paragraphs inuit-lists inuit-images
+ * Objects:     bower install --save inuit-pack inuit-tables inuit-media inuit-tabs inuit-flag inuit-box inuit-buttons inuit-list-block inuit-list-ui inuit-list-inline inuit-block inuit-layout inuit-list-bare
+ * Components:
+ * Trumps:      bower install --save inuit-spacing-responsive inuit-clearfix inuit-headings-trumps inuit-widths-responsive inuit-print inuit-spacing inuit-widths
+
+
+
+   ##################################
+   #                                #
+   #            Settings            #       Low Specifity        Far Reaching          Generic
+   #                                #
+    ################################              #                    #                  #
+     #                            #               #                    #                  #
+     #           Tools            #               #                    #                  #
+     #                            #               #                    #                  #
+      ############################                #                    #                  #
+       #                        #                 #                    #                  #
+       #        Generic         #                 #                    #                  #
+       #                        #                 #                    #                  #
+        ########################                  #                    #                  #
+         #                    #                   #                    #                  #
+         #        Base        #                   #                    #                  #
+         #                    #                   #                    #                  #
+          ####################                    #                    #                  #
+           #                #                     #                    #                  #
+           #     Objects    #                     #                    #                  #
+           #                #                     #                    #                  #
+            ################                      #                    #                  #
+             #            #                       #                    #                  #
+               Components                       #####                #####              #####
+             #            #                      ###                  ###                ###
+              ############                        #                    #                  #
+               #        #
+                 Trumps                     High Specifity         Localised           Explcit
+                #      #
+                 #    #
+                  #  #
+                   ##
+
+      #
+   S  #                 |                 |                 |                 |                 |
+   p  #     Generic     |       Base      |     Objects     |   Components    |     Trumps      |
+   e  #                 |                 |                 |                 |                #|
+   c  #                 |                 |                 |                 |               # |
+   i  #                 |                 |                 |                 |             ##  |
+   f  #                 |                 |                 |                 |           ##    |
+   t  #                 |                 |                 |                 |          #      |
+   y  #                 |                 |                 |                 |         #       |
+      #                 |                 |                 |                 |     ####        |
+      #                 |                 |                 |                 |  ###            |
+      #                 |                 |                 |            ########               |
+      #                 |                 |                 |     #######     |                 |
+      #                 |                 |    ###################            |                 |
+      #                 |      ################             |                 |                 |
+      #         ###############           |                 |                 |                 |
+      #    #####        |                 |                 |                 |                 |
+      #  #              |                 |                 |                 |                 |
+      #                 |                 |                 |                 |                 |
+      #############################################################################################
+
+                                                                       Location in Stylesheet
+*/
+
+/* @settings
+*/
+$inuit-base-radius : 4px;
+$font-roboto : 'Roboto', sans-serif;
+$font-times-new-roman : 'Times New Roman', serif;
+$inuit-base-font-family : $font-roboto;
+$inuit-heading-font-family : $font-times-new-roman;
+$inuit-base-text-color : #000;
+@import "inuit/settings/settings.defaults";
+@import "inuit/settings/settings.responsive";
+@import "inuit/settings/settings.colors";
+
+/* @tools
+*/
+@import "inuit/tools/tools.functions";
+@import "inuit/tools/tools.mixins";
+@import "inuit/tools/tools.widths";
+@import "inuit/tools/tools.responsive";
+@import "inuit/tools/tools.debug";
+
+/* @generics
+*/
+@import "inuit/generic/generic.normalize";
+@import "inuit/generic/generic.reset";
+@import "inuit/generic/generic.box-sizing";
+@import "inuit/generic/generic.shared";
+
+/* @base
+*/
+@import "inuit/base/base.page";
+$inuit-heading-color : #222;
+@import "inuit/base/base.headings";
+@import "inuit/base/base.paragraphs";
+@import "inuit/base/base.lists";
+@import "inuit/base/base.images";
+
+/* @objects
+*/
+//@import "inuit/objects/objects.block";
+//@import "inuit/objects/objects.box";
+//@import "inuit/objects/objects.flag";
+//@import "inuit/objects/objects.layout";
+//@import "inuit/objects/objects.list-bare";
+//@import "inuit/objects/objects.list-block";
+//@import "inuit/objects/objects.list-inline";
+//@import "inuit/objects/objects.list-ui";
+//@import "inuit/objects/objects.media";
+//@import "inuit/objects/objects.pack";
+//@import "inuit/objects/objects.tables";
+//@import "inuit/objects/objects.tabs";
+//@import "inuit/objects/objects.buttons";
+//@import "inuit/objects/objects.shadow";
+//@import "inuit/objects/objects.wrappers";
+//@import "inuit/objects/objects.input";
+//@import "inuit/objects/objects.textarea";
+//@import "inuit/objects/objects.link";
+//@import "inuit/objects/objects.arrow";
+//@import "inuit/objects/objects.tile";
+//@import "inuit/objects/objects.accordion";
+//@import "inuit/objects/objects.dividers";
+
+/* @vendors
+*/
+//@import "inuit/vendor/vendors.waves";
+
+
+
+/* @components
+*/
+@import "inuit/components/component.app";
+
+
+
+
+/* @trumps
+*/
+@import "inuit/trumps/trumps.clearfix";
+@import "inuit/trumps/trumps.widths";
+@import "inuit/trumps/trumps.widths-responsive";
+@import "inuit/trumps/trumps.headings";
+$inuit-enable-margins : true;
+$inuit-enable-paddings : true;
+@import "inuit/trumps/trumps.spacing";
+@import "inuit/trumps/trumps.spacing-responsive";
+@import "inuit/trumps/trumps.print";
+@import "inuit/trumps/trumps.colors";
+@import "inuit/trumps/trumps.show-hide";
+@import "inuit/trumps/trumps.misc";

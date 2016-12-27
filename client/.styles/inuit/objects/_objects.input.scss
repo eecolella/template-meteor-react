@@ -1,0 +1,27 @@
+/*
+ *
+ *
+ *
+ *
+ * @objects.input(css)
+ *
+ * A simple button object.
+ *
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-input-namespace:       $inuit-namespace-objects !default;
+
+
+$inuit-input-padding:         2px 4px !default;
+$inuit-input-radius:          $inuit-base-radius !default;
+$inuit-input-color-border:          $inuit-base-color-border !default;
+
+.#{$inuit-input-namespace}input,
+%#{$inuit-input-namespace}input {
+
+	padding: $inuit-input-padding;
+	border-radius: $inuit-input-radius;
+	border: 1px solid $inuit-input-color-border;
+
+}

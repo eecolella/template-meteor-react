@@ -1,0 +1,49 @@
+/*
+ *
+ *
+ *
+ *
+ * @trumps.colors(css)
+ *
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-colors-prefix : $inuit-namespace-utilities !default;
+
+
+/*
+ *
+ *
+ *
+ *
+ * @color-generator(css)
+ *
+ */
+$c-list-color : () !default;
+
+@each $key, $value in $c-list-color {
+
+	.#{$inuit-colors-prefix}-color-#{$key} {
+		color : $value !important;
+	}
+
+}
+
+
+/*
+ *
+ *
+ *
+ *
+ * @background-color-generator(css)
+ *
+ */
+$c-list-bg : () !default;
+
+@each $key, $value in $c-list-bg {
+
+	.#{$inuit-colors-prefix}-background-#{$key} {
+		background-color : $value !important;
+	}
+
+}
